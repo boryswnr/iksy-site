@@ -7,35 +7,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IKSY</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="./assets/img/logo.svg" type="image/x-icon">
+  <script src="./assets/js/index.js" defer></script>
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <a href="#" class="home-sign">X</a>
-    <div class="hamburger-btn">
-      <span></span><span></span><span></span>
-    </div>
+  <!-- navigation menu for smaller screens -->
+  <aside class="menu-screen" id="small-screen-menu">
     <ul class="menu">
       <li class="menu-item">ZESPÓŁ</li>
       <li class="menu-item">KONCERTY</li>
       <li class="menu-item">KONTAKT</li>
       <li class="menu-item">SKLEP</li>
-      <li class="menu-item">
-        <ul class="socials-list">
-          <li class="socials-item">
-            <a href="#" class="social-link">1</a>
-          </li>
-          <li class="socials-item">
-            <a href="#" class="social-link">2</a>
-          </li>
-          <li class="socials-item">
-            <a href="#" class="social-link">3</a>
-          </li>
-          <li class="socials-item">
-            <a href="#" class="social-link">4</a>
-          </li>
-        </ul>
+    </ul>
+
+    <ul class="socials-list">
+      <li class="socials-item">
+        <a href="#" class="social-link"><img src="./assets/img/instagram.svg" alt="instagram logo"></a>
+      </li>
+      <li class="socials-item">
+        <a href="#" class="social-link"><img src="./assets/img/fb.svg" alt="facebook logo"></a>
+      </li>
+      <li class="socials-item">
+        <a href="#" class="social-link"><img src="./assets/img/spotify.svg" alt="spotify logo"></a>
+      </li>
+      <li class="socials-item">
+        <a href="#" class="social-link"><img src="./assets/img/youtube.svg" alt="youtube logo"></a>
+      </li>
+  </aside>
+
+  <nav class="navbar">
+    <a href="#" class="home-sign"><img src="./assets/img/logo.svg" alt="bands logo"></a>
+    <button class="hamburger hamburger--squeeze" type="button" id="hamburger-btn">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <!-- navigation menu for navbar, appears on wider screens -->
+    <ul class="menu">
+      <li class="menu-item">ZESPÓŁ</li>
+      <li class="menu-item">KONCERTY</li>
+      <li class="menu-item">KONTAKT</li>
+      <li class="menu-item">SKLEP</li>
+
       </li>
     </ul>
   </nav>

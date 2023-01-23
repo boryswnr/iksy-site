@@ -26,6 +26,9 @@ body {
   box-sizing: border-box;
   font-family: "Telegraf-Regular" !important;
 }
+body.stop-scroll {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -49,6 +52,19 @@ ul {
 
 .container {
   margin: 0 1.7rem;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #4c459b;
+}
+.socials-list .socials-item {
+  margin: 0 35px 0 0;
+}
+.socials-list .socials-item:last-child {
+  margin: 0;
 }
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -346,15 +362,189 @@ summary {
   max-width: 431px;
 }
 .welcome-sign .socials-list {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  background-color: #4c459b;
   padding: 57px 0 20px 0;
 }
-.welcome-sign .socials-list .socials-item {
-  margin: 0 35px 0 0;
+
+.navbar {
+  background-color: #4c459b;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 1.7rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 6;
 }
-.welcome-sign .socials-list .socials-item:last-child {
+.navbar .home-sign img {
+  max-width: 25px;
+}
+.navbar .menu {
+  display: none;
+}
+@media (min-width: 900px) {
+  .navbar {
+    padding: 2rem 1.7rem;
+  }
+  .navbar .hamburger {
+    display: none;
+  }
+  .navbar .menu {
+    display: block;
+    display: flex;
+    color: #e8ddbf;
+    font-family: "Telegraf-Bold";
+  }
+  .navbar .menu .menu-item {
+    margin: 0 30px 0 0;
+  }
+  .navbar .menu .menu-item:last-child {
+    margin: 0;
+  }
+}
+
+aside.menu-screen {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #4c459b;
+  color: #e8ddbf;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 5;
+  transform: translate(100%, 0);
+  overflow: hidden;
+  transition: 300ms;
+}
+aside.menu-screen .menu .menu-item {
+  font-family: "Telegraf-Bold";
+  margin: 0 0 20px 0;
+  font-size: 2.1rem;
+}
+aside.menu-screen .menu .menu-item:last-child {
   margin: 0;
+}
+aside.menu-screen .socials-list {
+  position: absolute;
+  bottom: 7%;
+}
+aside.menu-screen.visible {
+  transform: translate(0, 0);
+}
+@media (min-width: 900px) {
+  aside.menu-screen {
+    display: none;
+  }
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #e8ddbf;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #e8ddbf;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }/*# sourceMappingURL=main.css.map */

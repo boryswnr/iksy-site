@@ -8,6 +8,10 @@ html {
 body {
     box-sizing: border-box;
     font-family: $font-family-main !important;
+
+    &.stop-scroll {
+        overflow: hidden;
+    }
 }
 
 h1,
@@ -32,4 +36,19 @@ ul {
 
 .container {
     margin: 0 1.7rem;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: $color-bg-main;
+
+    .socials-item {
+        margin: 0 35px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
 }

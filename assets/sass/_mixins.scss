@@ -28,3 +28,15 @@
         url("../telegraf-font/Telegraf-UltraLight.woff2") format("woff2"),
         url("../telegraf-font/Telegraf-UltraLight.ttf") format("ttf");
 }
+
+@mixin forTablet {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin forDesktop {
+    @media (min-width: 1100px) {
+        @content;
+    }
+}
