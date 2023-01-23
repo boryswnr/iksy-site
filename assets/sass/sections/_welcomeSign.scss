@@ -1,0 +1,45 @@
+.welcome-sign {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-x: hidden;
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url("https://picsum.photos/2114/1380");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .title-pic-wrapper {
+        margin: 0 auto -3rem auto;
+
+        img {
+            max-width: 431px;
+        }
+    }
+
+    .socials-list {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        background-color: $color-bg-main;
+        padding: 57px 0 20px 0;
+
+        .socials-item {
+            margin: 0 35px 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

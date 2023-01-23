@@ -1,0 +1,30 @@
+@import "variables";
+
+@font-face {
+    font-family: $font-family-main;
+    src: url("../telegraf-font/Telegraf-Regular.eot");
+    src: url("../telegraf-font/Telegraf-Regular.woff") format("woff"),
+        url("../telegraf-font/Telegraf-Regular.woff2") format("woff2"),
+        url("../telegraf-font/Telegraf-Regular.ttf") format("ttf");
+}
+@font-face {
+    font-family: $font-family-bold;
+    src: url("../telegraf-font/Telegraf-Bold.eot");
+    src: url("../telegraf-font/Telegraf-Bold.woff") format("woff"),
+        url("../telegraf-font/Telegraf-Bold.woff2") format("woff2"),
+        url("../telegraf-font/Telegraf-Bold.ttf") format("ttf");
+}
+@font-face {
+    font-family: $font-family-ultra-bold;
+    src: url("../telegraf-font/Telegraf-UltraBold.eot");
+    src: url("../telegraf-font/Telegraf-UltraBold.woff") format("woff"),
+        url("../telegraf-font/Telegraf-UltraBold.woff2") format("woff2"),
+        url("../telegraf-font/Telegraf-UltraBold.ttf") format("ttf");
+}
+@font-face {
+    font-family: $font-family-ultra-light;
+    src: url("../telegraf-font/Telegraf-UltraLight.eot");
+    src: url("../telegraf-font/Telegraf-UltraLight.woff") format("woff"),
+        url("../telegraf-font/Telegraf-UltraLight.woff2") format("woff2"),
+        url("../telegraf-font/Telegraf-UltraLight.ttf") format("ttf");
+}
