@@ -357,12 +357,13 @@ summary {
 }
 .welcome-sign .title-pic-wrapper {
   margin: 0 auto -3rem auto;
+  padding-left: 10px;
 }
 .welcome-sign .title-pic-wrapper img {
   max-width: 431px;
 }
 .welcome-sign .socials-list {
-  padding: 57px 0 20px 0;
+  padding: 57px 0 60px 0;
 }
 
 .navbar {
@@ -547,4 +548,31 @@ aside.menu-screen.visible {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.band-info {
+  background-color: #4c459b;
+  padding: 2rem;
+}
+.band-info h1,
+.band-info p {
+  padding: 0 1.7rem;
+}
+.band-info .title.band {
+  color: #ed7759;
+  font-family: "Telegraf-Regular";
+  font-weight: 400;
+  font-size: 2.1rem;
+  margin: 1rem 0 3rem 0;
+}
+.band-info .title.band span {
+  font-family: "Telegraf-UltraBold";
+  font-weight: 800;
+}
+.band-info .paragraph.band {
+  color: #e8ddbf;
+  line-height: 1.2;
+}
+.band-info .band-photo-wrapper {
+  margin: 3rem 0 0 0;
 }/*# sourceMappingURL=main.css.map */

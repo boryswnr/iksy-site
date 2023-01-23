@@ -1,0 +1,31 @@
+.band-info {
+    background-color: $color-bg-main;
+    padding: 2rem;
+
+    h1,
+    p {
+        padding: 0 1.7rem;
+    }
+
+    .title.band {
+        color: $color-bg-secondary;
+        font-family: $font-family-main;
+        font-weight: 400;
+        font-size: 2.1rem;
+        margin: 1rem 0 3rem 0;
+
+        span {
+            font-family: $font-family-ultra-bold;
+            font-weight: 800;
+        }
+    }
+
+    .paragraph.band {
+        color: $color-font-main;
+        line-height: 1.2;
+    }
+
+    .band-photo-wrapper {
+        margin: 3rem 0 0 0;
+    }
+}
