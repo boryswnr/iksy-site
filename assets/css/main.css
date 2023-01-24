@@ -575,22 +575,22 @@ aside.menu-screen.visible {
   line-height: 1.2;
   padding: 0 2rem;
 }
-.band-info .band-photos-wrapper {
-  margin: 3rem 0 0 0;
+.band-info .band-photos-container .band-photos-wrapper {
+  margin: 3rem auto;
   width: 100%;
   max-width: 385px;
   height: 385px;
   position: relative;
   overflow: hidden;
 }
-.band-info .band-photos-wrapper .photo-container {
+.band-info .band-photos-container .band-photos-wrapper .photo-container {
   transition: all 400ms;
   width: 100%;
   max-width: 385px;
   height: 385px;
   position: absolute;
 }
-.band-info .band-photos-wrapper .photo-container .photo {
+.band-info .band-photos-container .band-photos-wrapper .photo-container .photo {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
