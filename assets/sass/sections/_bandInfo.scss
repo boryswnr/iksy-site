@@ -1,6 +1,6 @@
 .band-info {
     background-color: $color-bg-main;
-    padding: 2rem;
+    padding: 2rem 0;
 
     h1,
     p {
@@ -13,6 +13,7 @@
         font-weight: 400;
         font-size: 2.1rem;
         margin: 1rem 0 3rem 0;
+        padding: 0 2rem;
 
         span {
             font-family: $font-family-ultra-bold;
@@ -23,9 +24,56 @@
     .paragraph.band {
         color: $color-font-main;
         line-height: 1.2;
+        padding: 0 2rem;
     }
 
-    .band-photo-wrapper {
+    // .band-photos-container {
+    .band-photos-wrapper {
         margin: 3rem 0 0 0;
+        width: 100%;
+        max-width: 385px;
+        height: 385px;
+        position: relative;
+        overflow: hidden;
+        // min-height: 110vw;
+        // text-align: center;
+
+        .photo-container {
+            transition: all 400ms;
+            width: 100%;
+            max-width: 385px;
+            height: 385px;
+            position: absolute;
+
+            .photo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                // transform: translate(-50%, 0);
+            }
+        }
+    }
+    // }
+
+    .photos-switcher {
+        display: flex;
+        justify-content: center;
+
+        .switch {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            border: solid 1px $color-font-main;
+            margin: 0 15px 0 0;
+            transition: all 200ms;
+
+            &.active {
+                background-color: $color-font-main;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
     }
 }
