@@ -40,7 +40,7 @@
                 transition: all 400ms;
                 width: 100%;
                 max-width: 385px;
-                height: 385px;
+                max-height: 385px;
                 position: absolute;
 
                 .photo {
@@ -59,8 +59,8 @@
                     opacity: 0;
                     color: $color-bg-main;
                     display: grid;
-                    grid-template-columns: 66.5fr 251fr 66.5fr;
-                    grid-template-rows: 116.5fr 251fr 116.5fr;
+                    grid-template-columns: 66fr 251fr 66fr;
+                    grid-template-rows: 116fr 251fr 116fr;
                     transition: 300ms;
                     -webkit-user-select: none;
                     -khtml-user-select: none;

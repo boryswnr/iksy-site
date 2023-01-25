@@ -9,36 +9,62 @@ hamburger.addEventListener("click", () => {
 });
 
 // bands photo slider
-const slider = document.querySelector(".band-photos-wrapper");
+const portraitSlider = document.querySelector(".band-photos-wrapper");
 const photoList = document.querySelectorAll(".photo-container");
-let currentIndex = 0;
+let currentPortraitIndex = 0;
 
 // spreading photos so they are next to each other
 photoList.forEach((photo, index) => {
     photo.style.transform = `translateX(${index * 100}%)`;
 });
 
+const clipSlide = document.querySelector(".concerts-clip-wrapper");
+const clipList = document.querySelectorAll(".clip-container");
+let currentClipIndex = 0;
+
+clipList.forEach((clip, index) => {
+    clip.style.transform = `translateX(${index * 100}%)`;
+});
+
 // handling switching photos
-const switchArray = document.querySelectorAll(".switch");
-const switchClickHandler = (e) => {
-    currentIndex = +e.target.id - 1;
-    slidePhotos();
-    switchArray.forEach((el) => {
+const photoSwitchArray = document.querySelectorAll(".switch");
+const clipSwitchArray = document.querySelectorAll(".clip-switch");
+
+const photoSwitchClickHandler = (e) => {
+    currentPortraitIndex = +e.target.id - 1;
+    slidePhotos(photoList, photoSwitchArray, currentPortraitIndex);
+    photoSwitchArray.forEach((el) => {
         el.classList.remove("active");
     });
     e.target.classList.add("active");
 };
 
-switchArray.forEach((elem) =>
-    elem.addEventListener("click", (e) => switchClickHandler(e))
+photoSwitchArray.forEach((elem) =>
+    elem.addEventListener("click", (e) => photoSwitchClickHandler(e))
 );
-const slidePhotos = () => {
-    photoList.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * (index - currentIndex)}%)`;
+
+const clipSwitchClickHandler = (e) => {
+    const targetID = parseInt(e.target.style.cssText.split(" ")[1]);
+    currentClipIndex = targetID - 1;
+    slidePhotos(clipList, clipSwitchArray, currentClipIndex);
+    clipSwitchArray.forEach((el) => {
+        el.classList.remove("active");
     });
-    switchArray.forEach((element, index) => {
+    e.target.classList.add("active");
+    console.log();
+};
+
+clipSwitchArray.forEach((elem) =>
+    elem.addEventListener("click", (e) => clipSwitchClickHandler(e))
+);
+
+const slidePhotos = (sliderArray, switcherArray, usedIndex) => {
+    sliderArray.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - usedIndex)}%)`;
+    });
+    switcherArray.forEach((element, index) => {
         element.classList.remove("active");
-        if (index === currentIndex) element.classList.add("active");
+        if (index === usedIndex) element.classList.add("active");
     });
 };
 // switching photos with sliding
@@ -77,7 +103,7 @@ window.oncontextmenu = function (event) {
 
 function touchStart(index) {
     return function (event) {
-        currentIndex = index;
+        currentPortraitIndex = index;
         startPos = getPositionX(event);
         isDragging = true;
 
@@ -92,10 +118,10 @@ function touchEnd() {
 
     const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -100 && currentIndex < photoList.length - 1)
-        currentIndex += 1;
+    if (movedBy < -100 && currentPortraitIndex < photoList.length - 1)
+        currentPortraitIndex += 1;
 
-    if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+    if (movedBy > 100 && currentPortraitIndex > 0) currentPortraitIndex -= 1;
 
     setPositionByIndex();
 }
@@ -114,12 +140,12 @@ function getPositionX(event) {
 }
 
 function animation() {
-    slidePhotos();
+    slidePhotos(photoList, photoSwitchArray, currentPortraitIndex);
     if (isDragging) requestAnimationFrame(animation);
 }
 
 function setPositionByIndex() {
-    currentTranslate = currentIndex * -window.innerWidth;
+    currentTranslate = currentPortraitIndex * -window.innerWidth;
     prevTranslate = currentTranslate;
-    slidePhotos();
+    slidePhotos(photoList, photoSwitchArray, currentPortraitIndex);
 }

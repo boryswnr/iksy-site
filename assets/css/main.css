@@ -587,7 +587,7 @@ aside.menu-screen.visible {
   transition: all 400ms;
   width: 100%;
   max-width: 385px;
-  height: 385px;
+  max-height: 385px;
   position: absolute;
 }
 .band-info .band-photos-container .band-photos-wrapper .photo-container .photo {
@@ -606,8 +606,8 @@ aside.menu-screen.visible {
   opacity: 0;
   color: #4c459b;
   display: grid;
-  grid-template-columns: 66.5fr 251fr 66.5fr;
-  grid-template-rows: 116.5fr 251fr 116.5fr;
+  grid-template-columns: 66fr 251fr 66fr;
+  grid-template-rows: 116fr 251fr 116fr;
   transition: 300ms;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -651,5 +651,53 @@ aside.menu-screen.visible {
   background-color: #e8ddbf;
 }
 .band-info .photos-switcher .switch:last-child {
+  margin: 0;
+}
+
+.concerts {
+  background-color: #ed7759;
+  text-align: center;
+}
+.concerts .concerts-title {
+  color: #4c459b;
+  margin: 0;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  padding: 55px 0;
+}
+.concerts .band-concerts-container .concerts-clips-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 385px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+.concerts .band-concerts-container .concerts-clips-wrapper .clip-container {
+  transition: all 400ms;
+  width: 100%;
+  max-width: 385px;
+  height: 210px;
+  position: absolute;
+  background-color: #e8ddbf;
+}
+.concerts .videos-switcher {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.concerts .videos-switcher .clip-switch {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: solid 1px #e8ddbf;
+  margin: 0 15px 0 0;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.concerts .videos-switcher .clip-switch.active {
+  background-color: #e8ddbf;
+}
+.concerts .videos-switcher .clip-switch:last-child {
   margin: 0;
 }/*# sourceMappingURL=main.css.map */
