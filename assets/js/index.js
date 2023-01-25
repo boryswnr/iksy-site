@@ -52,7 +52,9 @@ let isDragging = false,
 
 photoList.forEach((slide, index) => {
     const slideImage = slide.querySelector("img");
+    const overlay = slide.querySelector(".photo-overlay");
     slideImage.addEventListener("dragstart", (e) => e.preventDefault());
+    overlay.addEventListener("dragstart", (e) => e.preventDefault());
 
     // Touch events
     slide.addEventListener("touchstart", touchStart(index));
