@@ -631,7 +631,7 @@ aside.menu-screen.visible {
   padding: 0;
   align-self: center;
 }
-.band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:hover {
+.band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:hover, .band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:active {
   opacity: 0.8;
 }
 .band-info .photos-switcher {

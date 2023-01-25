@@ -85,7 +85,8 @@
                         align-self: center;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:active {
                         opacity: 0.8;
                     }
                 }
