@@ -40,3 +40,4 @@ function clearListeners() {
 }
 
 window.addEventListener("resize", clearListeners);
+window.addEventListener("DOMContentLoaded", clearListeners);
