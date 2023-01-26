@@ -30,6 +30,11 @@
                 height: 210px;
                 position: absolute;
                 background-color: $color-font-main;
+                // temp styling until I get content for those frames
+                padding: 20%;
+                font-size: 2rem;
+                font-weight: 700;
+                color: $color-bg-main;
             }
         }
     }

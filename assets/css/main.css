@@ -685,6 +685,10 @@ aside.menu-screen.visible {
   height: 210px;
   position: absolute;
   background-color: #e8ddbf;
+  padding: 20%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4c459b;
 }
 .concerts .videos-switcher {
   display: flex;
