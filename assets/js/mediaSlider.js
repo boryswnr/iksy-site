@@ -14,9 +14,6 @@ export class mediaSlider {
 
     addSliderEventListeners = () => {
         this.sliderArray.forEach((slide, index) => {
-            // const slideImage = slide.querySelector("img");
-            // slideImage.addEventListener("dragstart", (e) => e.preventDefault());
-
             // Touch events
             slide.addEventListener("touchstart", this.touchStart(index));
             slide.addEventListener("touchend", this.touchEnd);
@@ -42,6 +39,21 @@ export class mediaSlider {
     addSwitcherEventListeners = () => {
         this.switchArray.forEach((elem) =>
             elem.addEventListener("click", (e) => this.switchClickHandler(e))
+        );
+    };
+
+    removeAllEventListeners = () => {
+        this.sliderArray.forEach((slide, index) => {
+            slide.removeEventListener("touchstart", this.touchStart(index));
+            slide.removeEventListener("touchend", this.touchEnd);
+            slide.removeEventListener("touchmove", this.touchMove);
+            slide.removeEventListener("mousedown", this.touchStart(index));
+            slide.removeEventListener("mouseup", this.touchEnd);
+            slide.removeEventListener("mouseleave", this.touchEnd);
+            slide.removeEventListener("mousemove", this.touchMove);
+        });
+        this.switchArray.forEach((elem) =>
+            elem.removeEventListener("click", (e) => this.switchClickHandler(e))
         );
     };
 

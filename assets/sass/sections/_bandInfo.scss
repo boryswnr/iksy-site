@@ -35,6 +35,7 @@
             height: 385px;
             position: relative;
             overflow: hidden;
+            line-height: 0;
 
             .photo-container {
                 transition: all 400ms;
@@ -91,6 +92,22 @@
                     }
                 }
             }
+
+            @include forTablet {
+                margin: 3rem 0;
+                width: 100%;
+                max-width: 100%;
+                height: calc(100vw / 5);
+
+                .photo-container {
+                    width: 20%;
+                    max-width: 20%;
+                    .photo {
+                        width: calc(100vw / 5);
+                        max-width: 100%;
+                    }
+                }
+            }
         }
     }
 
@@ -114,6 +131,10 @@
             &:last-child {
                 margin: 0;
             }
+        }
+
+        @include forTablet {
+            display: none;
         }
     }
 }

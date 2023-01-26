@@ -1,0 +1,26 @@
+.contact {
+    text-align: center;
+    color: $color-bg-main;
+
+    .contact-title {
+        font-size: 2rem;
+        letter-spacing: 0.06rem;
+        font-weight: 800;
+    }
+
+    .contact-target-wrapper {
+        margin: 0 0 3rem 0;
+        .contact-name {
+            font-size: 1.2rem;
+            letter-spacing: 0.06rem;
+            line-height: 125.5%;
+            margin: 0 0 1.5rem 0;
+        }
+        .contact-target-link {
+            display: block;
+            margin: 0 0 1.5rem 0;
+            color: $color-bg-main;
+            font-size: 1.2rem;
+        }
+    }
+}
