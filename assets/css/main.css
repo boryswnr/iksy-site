@@ -672,6 +672,11 @@ aside.menu-screen.visible {
   height: 210px;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 .concerts .band-concerts-container .concerts-clips-wrapper .clip-container {
   transition: all 400ms;
