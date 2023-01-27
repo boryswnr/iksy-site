@@ -1,6 +1,6 @@
 import { mediaSlider } from "./mediaSlider.js";
 
-const TABLET_SCREEN_SIZE = 900;
+const TABLET_SCREEN_SIZE = 760;
 
 // mobile menu
 const hamburger = document.getElementById("hamburger-btn");

@@ -4,27 +4,55 @@
 
     h1,
     p {
-        padding: 0 1.7rem;
-    }
+        padding: 0 10%;
 
-    .title.band {
-        color: $color-bg-secondary;
-        font-family: $font-family-main;
-        font-weight: 400;
-        font-size: 2.1rem;
-        margin: 1rem 0 3rem 0;
-        padding: 0 2rem;
+        @include forTablet {
+            padding: 0 15%;
+        }
 
-        span {
-            font-family: $font-family-ultra-bold;
-            font-weight: 800;
+        @include forDesktop {
+            padding: 0;
         }
     }
 
-    .paragraph.band {
-        color: $color-font-main;
-        line-height: 1.2;
-        padding: 0 2rem;
+    .introduction-wrapper {
+        .title.band {
+            color: $color-bg-secondary;
+            font-family: $font-family-main;
+            font-weight: 400;
+            font-size: 2.1rem;
+            margin: 1rem 0 3rem 0;
+            letter-spacing: 0.06rem;
+
+            span {
+                font-family: $font-family-ultra-bold;
+                font-weight: 800;
+            }
+
+            @include forTablet {
+                font-size: 4rem;
+            }
+        }
+
+        .paragraphs-wrapper {
+            .paragraph.band {
+                color: $color-font-main;
+                line-height: 1.2;
+            }
+        }
+        @include forDesktop {
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+
+            .title.band {
+                max-width: 40%;
+            }
+
+            .paragraphs-wrapper {
+                max-width: 40%;
+            }
+        }
     }
 
     .band-photos-container {

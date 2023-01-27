@@ -9,3 +9,11 @@ $font-family-main: "Telegraf-Regular";
 $font-family-bold: "Telegraf-Bold";
 $font-family-ultra-bold: "Telegraf-UltraBold";
 $font-family-ultra-light: "Telegraf-UltraLight";
+
+// SIZE
+$name-pic-height-mobile: 162px;
+$name-pic-margin-mobile: -(calc($name-pic-height-mobile/2.5));
+$name-pic-height-tablet: 289px;
+$name-pic-margin-tablet: -(calc($name-pic-height-tablet/2.5));
+$name-pic-height-desktop: 485px;
+$name-pic-margin-desktop: -(calc($name-pic-height-desktop/2.5));

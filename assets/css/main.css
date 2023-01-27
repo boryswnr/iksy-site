@@ -70,6 +70,7 @@ ul {
 footer {
   color: #4c459b;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -346,7 +347,7 @@ summary {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .welcome-sign::before {
   content: "";
@@ -361,11 +362,27 @@ summary {
   z-index: -1;
 }
 .welcome-sign .title-pic-wrapper {
-  margin: 0 auto -3rem auto;
-  padding-left: 10px;
+  width: 100%;
+  text-align: center;
 }
 .welcome-sign .title-pic-wrapper img {
-  max-width: 431px;
+  margin: 0 auto -70px auto;
+  padding-left: 20px;
+  max-height: 162px;
+}
+@media (min-width: 760px) {
+  .welcome-sign .title-pic-wrapper img {
+    margin: 0 auto -100px auto;
+    max-height: 250px;
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1000px) {
+  .welcome-sign .title-pic-wrapper img {
+    margin: 0 auto -180px auto;
+    max-height: 400px;
+    padding-left: 80px;
+  }
 }
 .welcome-sign .socials-list {
   padding: 57px 0 60px 0;
@@ -387,7 +404,7 @@ summary {
 .navbar .menu {
   display: none;
 }
-@media (min-width: 900px) {
+@media (min-width: 760px) {
   .navbar {
     padding: 2rem 1.7rem;
   }
@@ -438,7 +455,7 @@ aside.menu-screen .socials-list {
 aside.menu-screen.visible {
   transform: translate(0, 0);
 }
-@media (min-width: 900px) {
+@media (min-width: 760px) {
   aside.menu-screen {
     display: none;
   }
@@ -561,24 +578,53 @@ aside.menu-screen.visible {
 }
 .band-info h1,
 .band-info p {
-  padding: 0 1.7rem;
+  padding: 0 10%;
 }
-.band-info .title.band {
+@media (min-width: 760px) {
+  .band-info h1,
+.band-info p {
+    padding: 0 15%;
+  }
+}
+@media (min-width: 1000px) {
+  .band-info h1,
+.band-info p {
+    padding: 0;
+  }
+}
+.band-info .introduction-wrapper .title.band {
   color: #ed7759;
   font-family: "Telegraf-Regular";
   font-weight: 400;
   font-size: 2.1rem;
   margin: 1rem 0 3rem 0;
-  padding: 0 2rem;
+  letter-spacing: 0.06rem;
 }
-.band-info .title.band span {
+.band-info .introduction-wrapper .title.band span {
   font-family: "Telegraf-UltraBold";
   font-weight: 800;
 }
-.band-info .paragraph.band {
+@media (min-width: 760px) {
+  .band-info .introduction-wrapper .title.band {
+    font-size: 4rem;
+  }
+}
+.band-info .introduction-wrapper .paragraphs-wrapper .paragraph.band {
   color: #e8ddbf;
   line-height: 1.2;
-  padding: 0 2rem;
+}
+@media (min-width: 1000px) {
+  .band-info .introduction-wrapper {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .band-info .introduction-wrapper .title.band {
+    max-width: 40%;
+  }
+  .band-info .introduction-wrapper .paragraphs-wrapper {
+    max-width: 40%;
+  }
 }
 .band-info .band-photos-container .band-photos-wrapper {
   margin: 3rem auto;
@@ -640,7 +686,7 @@ aside.menu-screen.visible {
 .band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:hover, .band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:active {
   opacity: 0.8;
 }
-@media (min-width: 900px) {
+@media (min-width: 760px) {
   .band-info .band-photos-container .band-photos-wrapper {
     margin: 3rem 0;
     width: 100%;
@@ -675,7 +721,7 @@ aside.menu-screen.visible {
 .band-info .photos-switcher .switch:last-child {
   margin: 0;
 }
-@media (min-width: 900px) {
+@media (min-width: 760px) {
   .band-info .photos-switcher {
     display: none;
   }
@@ -773,4 +819,22 @@ aside.menu-screen.visible {
   margin: 0 0 1.5rem 0;
   color: #4c459b;
   font-size: 1.2rem;
+}
+@media (min-width: 760px) {
+  .contact .contact-title {
+    font-size: 4rem;
+  }
+  .contact .contact-targets {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+  }
+  .contact .contact-targets .contact-target-wrapper {
+    max-width: 30%;
+    margin-bottom: 300px;
+  }
+  .contact .contact-targets .contact-target-wrapper:last-child {
+    margin-right: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
