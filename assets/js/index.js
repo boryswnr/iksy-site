@@ -39,5 +39,27 @@ function clearListeners() {
     }
 }
 
-window.addEventListener("resize", clearListeners);
+const navbar = document.querySelector(".navbar");
+const anchors = document.querySelectorAll(".navanchor");
+
+function setUpAnchors() {
+    anchors.forEach((anchor) => {
+        anchor.style.top = `-${navbar.offsetHeight}px`;
+    });
+}
+
+setUpAnchors();
+
+const menuLinks = document.querySelectorAll(".aside-menu-link");
+menuLinks.forEach((item) =>
+    item.addEventListener("click", () => {
+        mobileMenu.classList.toggle("visible");
+        hamburger.classList.toggle("is-active");
+    })
+);
+
+window.addEventListener("resize", () => {
+    clearListeners();
+    setUpAnchors();
+});
 window.addEventListener("DOMContentLoaded", clearListeners);

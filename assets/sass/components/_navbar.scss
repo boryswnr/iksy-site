@@ -35,6 +35,10 @@
                 &:last-child {
                     margin: 0;
                 }
+
+                a {
+                    color: $color-font-main;
+                }
             }
         }
     }
@@ -63,6 +67,10 @@ aside.menu-screen {
 
             &:last-child {
                 margin: 0;
+            }
+
+            a {
+                color: $color-font-main;
             }
         }
     }

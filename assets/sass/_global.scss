@@ -34,6 +34,15 @@ ul {
     padding: 0;
 }
 
+section {
+    position: relative;
+    min-height: 100vh;
+
+    .navanchor {
+        position: absolute;
+    }
+}
+
 .container {
     margin: 0 1.7rem;
 }

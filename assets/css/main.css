@@ -50,6 +50,14 @@ ul {
   padding: 0;
 }
 
+section {
+  position: relative;
+  min-height: 100vh;
+}
+section .navanchor {
+  position: absolute;
+}
+
 .container {
   margin: 0 1.7rem;
 }
@@ -423,6 +431,9 @@ summary {
   .navbar .menu .menu-item:last-child {
     margin: 0;
   }
+  .navbar .menu .menu-item a {
+    color: #e8ddbf;
+  }
 }
 
 aside.menu-screen {
@@ -447,6 +458,9 @@ aside.menu-screen .menu .menu-item {
 }
 aside.menu-screen .menu .menu-item:last-child {
   margin: 0;
+}
+aside.menu-screen .menu .menu-item a {
+  color: #e8ddbf;
 }
 aside.menu-screen .socials-list {
   position: absolute;
