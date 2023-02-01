@@ -1,5 +1,9 @@
 .concerts {
-    background-color: $color-bg-secondary;
+    // background-color: $color-bg-secondary;
+    background-image: url(../../../assets/img/3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
 
     .concerts-title {
@@ -14,7 +18,7 @@
             margin: 0 auto;
             width: 100%;
             max-width: 385px;
-            height: 210px;
+            min-height: 210px;
             position: relative;
             overflow: hidden;
             -webkit-user-select: none;
@@ -27,14 +31,14 @@
                 transition: all 400ms;
                 width: 100%;
                 max-width: 385px;
-                height: 210px;
+                min-height: 210px;
                 position: absolute;
-                background-color: $color-font-main;
-                // temp styling until I get content for those frames
-                padding: 20%;
-                font-size: 2rem;
-                font-weight: 700;
-                color: $color-bg-main;
+
+                .concert-pic {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
         }
     }

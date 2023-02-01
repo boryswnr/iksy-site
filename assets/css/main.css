@@ -360,7 +360,7 @@ summary {
 .welcome-sign::before {
   content: "";
   display: block;
-  background-image: url("https://picsum.photos/2114/1380");
+  background-image: url(../../../assets/img/1.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -742,7 +742,10 @@ aside.menu-screen.visible {
 }
 
 .concerts {
-  background-color: #ed7759;
+  background-image: url(../../../assets/img/3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
 }
 .concerts .concerts-title {
@@ -756,7 +759,7 @@ aside.menu-screen.visible {
   margin: 0 auto;
   width: 100%;
   max-width: 385px;
-  height: 210px;
+  min-height: 210px;
   position: relative;
   overflow: hidden;
   -webkit-user-select: none;
@@ -769,13 +772,14 @@ aside.menu-screen.visible {
   transition: all 400ms;
   width: 100%;
   max-width: 385px;
-  height: 210px;
+  min-height: 210px;
   position: absolute;
-  background-color: #e8ddbf;
-  padding: 20%;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #4c459b;
+}
+.concerts .band-concerts-container .concerts-clips-wrapper .clip-container .concert-pic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .concerts .videos-switcher {
   display: flex;
