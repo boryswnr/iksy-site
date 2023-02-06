@@ -16,7 +16,7 @@
     .band-concerts-container {
         .concerts-clips-wrapper {
             margin: 0 auto;
-            width: 100%;
+            max-width: 100vw;
             width: 385px;
             height: 256px;
             position: relative;
@@ -31,13 +31,14 @@
                 transition: all 400ms;
                 // width: 100%;
                 // height: auto;
-                // max-width: 385px;
+                // max-width: 100vw;
                 min-height: 256px;
                 position: absolute;
 
                 .concert-pic {
                     width: 100%;
                     height: 100%;
+                    max-width: 100vw;
                     -webkit-user-select: none;
                     -khtml-user-select: none;
                     -moz-user-select: none;
