@@ -360,7 +360,7 @@ summary {
 .welcome-sign::before {
   content: "";
   display: block;
-  background-image: url(iksy-site/assets/img/1.jpg);
+  background-image: url(../../../assets/img/1.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -742,7 +742,7 @@ aside.menu-screen.visible {
 }
 
 .concerts {
-  background-image: url(iksy-site/assets/img/3.png);
+  background-image: url(../../../assets/img/3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
