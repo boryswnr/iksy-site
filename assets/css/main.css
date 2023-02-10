@@ -596,13 +596,13 @@ aside.menu-screen.visible {
 }
 @media (min-width: 760px) {
   .band-info h1,
-.band-info p {
+  .band-info p {
     padding: 0 15%;
   }
 }
 @media (min-width: 1000px) {
   .band-info h1,
-.band-info p {
+  .band-info p {
     padding: 0;
   }
 }
@@ -678,8 +678,7 @@ aside.menu-screen.visible {
   -webkit-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 .band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay h5 {
   grid-row: 1/2;
@@ -697,7 +696,10 @@ aside.menu-screen.visible {
   padding: 0;
   align-self: center;
 }
-.band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:hover, .band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:active {
+.band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay:hover {
+  opacity: 0.8;
+}
+.band-info .band-photos-container .band-photos-wrapper .photo-container .photo-overlay.show-overlay {
   opacity: 0.8;
 }
 @media (min-width: 760px) {
@@ -765,8 +767,7 @@ aside.menu-screen.visible {
   -webkit-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 .concerts .band-concerts-container .concerts-clips-wrapper .clip-container {
   transition: all 400ms;
@@ -780,8 +781,7 @@ aside.menu-screen.visible {
   -webkit-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -825,7 +825,6 @@ aside.menu-screen.visible {
   padding: 2rem 0;
 }
 .concerts .concert-video-wrapper .video-thumbnail {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }

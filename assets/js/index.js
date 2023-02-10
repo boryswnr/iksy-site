@@ -62,3 +62,25 @@ window.addEventListener("resize", () => {
     setUpAnchors();
 });
 window.addEventListener("DOMContentLoaded", clearListeners);
+
+const overlays = document.querySelectorAll(".photo-overlay");
+
+function removeOverlays() {
+    overlays.forEach((e) => e.classList.remove("show-overlay"));
+}
+
+overlays.forEach((element) => {
+    element.addEventListener("click", () => {
+        removeOverlays();
+        element.classList.add("show-overlay");
+    });
+});
+document.body.addEventListener("click", (e) => {
+    if (
+        ![...e.target.classList, ...e.target.parentElement.classList].includes(
+            "photo-overlay"
+        )
+    ) {
+        removeOverlays();
+    }
+});

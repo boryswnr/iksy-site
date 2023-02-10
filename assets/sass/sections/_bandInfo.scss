@@ -114,8 +114,11 @@
                         align-self: center;
                     }
 
-                    &:hover,
-                    &:active {
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    // &:active
+                    &.show-overlay {
                         opacity: 0.8;
                     }
                 }
