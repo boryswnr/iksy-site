@@ -9,9 +9,13 @@
     .concerts-title {
         color: $color-bg-main;
         margin: 0;
-        font-size: 2.1rem;
+        font-size: 2rem;
         letter-spacing: 1px;
         padding: 55px 0;
+
+        @include forTablet {
+            font-size: 4rem;
+        }
     }
     .band-concerts-container {
         .concerts-clips-wrapper {

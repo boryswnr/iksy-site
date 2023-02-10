@@ -757,9 +757,14 @@ aside.menu-screen.visible {
 .concerts .concerts-title {
   color: #4c459b;
   margin: 0;
-  font-size: 2.1rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   padding: 55px 0;
+}
+@media (min-width: 760px) {
+  .concerts .concerts-title {
+    font-size: 4rem;
+  }
 }
 .concerts .band-concerts-container .concerts-clips-wrapper {
   margin: 0 auto;
