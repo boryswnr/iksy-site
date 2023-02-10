@@ -80,6 +80,10 @@ footer {
   text-align: center;
   margin-bottom: 30px;
 }
+footer a {
+  color: #4c459b;
+  font-weight: 700;
+}
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
@@ -806,13 +810,13 @@ aside.menu-screen.visible {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  border: solid 1px #e8ddbf;
+  border: solid 1px #4c459b;
   margin: 0 15px 0 0;
   transition: all 200ms;
   cursor: pointer;
 }
 .concerts .videos-switcher .clip-switch.active {
-  background-color: #e8ddbf;
+  background-color: #4c459b;
 }
 .concerts .videos-switcher .clip-switch:last-child {
   margin: 0;

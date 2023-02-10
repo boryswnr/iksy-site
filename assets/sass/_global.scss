@@ -66,4 +66,9 @@ footer {
     color: $color-bg-main;
     text-align: center;
     margin-bottom: 30px;
+
+    a {
+        color: $color-bg-main;
+        font-weight: 700;
+    }
 }
