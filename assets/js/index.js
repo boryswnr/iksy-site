@@ -34,7 +34,11 @@ const clipSlider = new mediaSlider(clipList, clipSwitchArray);
 
 function clearListeners() {
     if (window.innerWidth > TABLET_SCREEN_SIZE) {
+        portraitSlider.currentIndex = 0;
+        portraitSlider.setPositionByIndex();
         portraitSlider.removeAllEventListeners();
+    } else {
+        portraitSlider.addSliderEventListeners();
     }
 }
 
