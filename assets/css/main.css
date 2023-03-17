@@ -840,6 +840,7 @@ aside.menu-screen.visible {
 .contact {
   text-align: center;
   color: #4c459b;
+  min-height: 0;
 }
 .contact .contact-title {
   font-size: 2rem;
